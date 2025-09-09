@@ -1,0 +1,69 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    border: 2px solid black;
+    background-color: aqua;
+}
+
+.nav-items > ul{
+    list-style-type:none;
+    display:flex;
+}
+.nav-items >ul >li{
+    padding:10Px;
+}
+.logo{
+    width: 100px;
+}
+.card{
+    width:200px;
+    
+    margin: 10px;
+    border: 2px solid black;
+}
+.card > img{
+    width: 100%;
+    height: 45%;
+    
+}
+.resturant{
+    display: flex;;
+    flex-wrap: wrap;
+}
+.filter-btn{
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-box{
+    width: 200px;
+    height: 400px;
+    background:#f0f0f0;
+    margin: 20px;
+}
+
+.fliter{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    background-color: gray;
+    width: 100%;
+    height: 50px;
+    border: 2px black solid;
+}
+.user-card{
+    padding:5px;
+    margin: 5px;
+    border: 2px solid black;
+}
