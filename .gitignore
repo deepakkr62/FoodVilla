@@ -39,3 +39,18 @@ test-results/
 .cache/
 .turbo/
 *.tsbuildinfo
+
+# Claude Code session state — never commit local Claude artefacts
+.claude/
+CLAUDE.local.md
+
+# OS / system noise
+ehthumbs.db
+desktop.ini
+.fseventsd/
+.AppleDouble/
+
+# Backup / temp
+*.bak
+*.tmp
+*~
