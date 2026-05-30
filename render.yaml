@@ -1,0 +1,36 @@
+# Render blueprint — provisions the backend web service with one click.
+# Visit https://render.com/deploy and point it at your fork to use.
+services:
+  - type: web
+    name: foodvilla-api
+    runtime: node
+    plan: free
+    region: singapore
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: node dist/server.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: USE_MEMORY_DB
+        value: "0"
+      - key: MONGODB_URI
+        sync: false # set in Render dashboard (mongodb+srv://...)
+      - key: JWT_ACCESS_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: JWT_ACCESS_EXPIRES
+        value: 15m
+      - key: JWT_REFRESH_EXPIRES
+        value: 7d
+      - key: FRONTEND_URL
+        sync: false # set to your Vercel URL once deployed
+      - key: STRIPE_SECRET_KEY
+        sync: false # optional; leave as sk_test_replace_me to use dev fallback
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false

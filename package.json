@@ -1,0 +1,27 @@
+{
+  "name": "foodvilla",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Food Villa - an elegant food ordering platform",
+  "workspaces": [
+    "frontend",
+    "backend",
+    "e2e"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "test": "npm run test -w backend && npm run test -w frontend",
+    "lint": "npm run lint -w backend && npm run lint -w frontend",
+    "start": "concurrently -n backend,frontend -c blue,green \"npm run start -w backend\" \"npm run start -w frontend\"",
+    "e2e": "npm run test -w e2e",
+    "e2e:ui": "npm run test:ui -w e2e",
+    "e2e:install": "npm run install-browsers -w e2e"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

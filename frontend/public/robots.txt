@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /owner/
+Disallow: /checkout
+Disallow: /orders
+Disallow: /profile
+Disallow: /cart
+
+Sitemap: https://foodvilla.vercel.app/sitemap.xml
