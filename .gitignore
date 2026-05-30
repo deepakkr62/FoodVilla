@@ -13,7 +13,9 @@ out/
 .env
 .env.local
 .env.*.local
-!.env.example
+.env.example
+backend/.env.example
+frontend/.env.example
 
 # Logs
 *.log
